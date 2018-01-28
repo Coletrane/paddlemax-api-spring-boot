@@ -24,7 +24,7 @@ class SecurityConfig : WebSecurityConfigurerAdapter() {
             .forRS256(apiAudience, issuer)
             .configure(http)
             .authorizeRequests()
-            .antMatchers(HttpMethod.POST, "v1/user/register")
+            .antMatchers(HttpMethod.POST, "v1/user/login")
                 .permitAll()
             .antMatchers(HttpMethod.GET, "v1/user/me")
                 .hasAuthority("read:user")

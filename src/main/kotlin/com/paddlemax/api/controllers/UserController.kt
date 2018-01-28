@@ -76,7 +76,7 @@ class UserController {
         return response
     }
 
-    @PostMapping("/register",
+    @PostMapping("/login",
         consumes = arrayOf(MediaType.APPLICATION_JSON_VALUE),
         produces = arrayOf(MediaType.APPLICATION_JSON_VALUE))
     fun register(
